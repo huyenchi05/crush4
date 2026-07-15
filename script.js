@@ -31,7 +31,7 @@ noButton.addEventListener("click", function () {
 
 function handleYesClick() {
   titleElement.innerHTML =
-    "Ơ thế là hết giận rồi hả 😭<br>Vậy e quậy tiếp nha :)))";
+    "Ơ thế là hết giận rồi hả 😭<br>Vậy e sẽ quậy tiếp nha :)))";
 
   buttonsContainer.classList.add("hidden");
   changeImage("yes");
@@ -58,7 +58,10 @@ function generateMessage(noCount) {
     "Thôi cho em xin lỗi đi mà :(",
   ];
 
-  const messageIndex = Math.min(noCount, messages.length - 1);
+  const messageIndex = Math.min(
+    noCount,
+    messages.length - 1
+  );
 
   return messages[messageIndex];
 }
