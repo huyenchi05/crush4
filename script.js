@@ -31,7 +31,7 @@ noButton.addEventListener("click", function () {
 
 function handleYesClick() {
   titleElement.innerHTML =
-    "Anh tha lỗi cho em rồi nha 🥺<br>Em hứa sẽ ngoan hơn ạ 😭";
+    "Ơ thế là hết giận rồi hả 😭<br>Ngại quá nha :3";
 
   buttonsContainer.classList.add("hidden");
   changeImage("yes");
@@ -51,11 +51,11 @@ function resizeYesButton() {
 function generateMessage(noCount) {
   const messages = [
     "Không tha đâu",
-    "Em biết lỗi rồi mà 😭",
-    "Anh tha lỗi cho em đi ạ 🥺",
-    "Em sai rồi, em xin lỗi anh 😭",
-    "Anh đừng giận em nữa nha 🥹",
-    "Em xin lỗi anh nhiều lắm 😭",
+    "Em xin lỗi mà 😭",
+    "Thôi mà, đừng giận nữa 🥲",
+    "Em biết lỗi rồi được chưa 😭",
+    "Anh khó tính thế 😔",
+    "Thôi cho em xin lỗi đi mà :(",
   ];
 
   const messageIndex = Math.min(noCount, messages.length - 1);
