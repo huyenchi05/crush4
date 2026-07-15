@@ -16,10 +16,13 @@ yesButton.addEventListener("click", handleYesClick);
 noButton.addEventListener("click", function () {
   if (play) {
     noCount++;
+
     const imageIndex = Math.min(noCount, MAX_IMAGES);
+
     changeImage(imageIndex);
     resizeYesButton();
     updateNoButtonText();
+
     if (noCount === MAX_IMAGES) {
       play = false;
     }
@@ -27,14 +30,19 @@ noButton.addEventListener("click", function () {
 });
 
 function handleYesClick() {
-  titleElement.innerHTML = "Anh iu bé ,Anh hứa hongg làm bé buồn nữa đouuu :3";
+  titleElement.innerHTML =
+    "Anh tha lỗi cho em rồi nha 🥺<br>Em hứa sẽ ngoan hơn ạ 😭";
+
   buttonsContainer.classList.add("hidden");
   changeImage("yes");
 }
 
 function resizeYesButton() {
   const computedStyle = window.getComputedStyle(yesButton);
-  const fontSize = parseFloat(computedStyle.getPropertyValue("font-size"));
+  const fontSize = parseFloat(
+    computedStyle.getPropertyValue("font-size")
+  );
+
   const newFontSize = fontSize * 1.6;
 
   yesButton.style.fontSize = `${newFontSize}px`;
@@ -42,15 +50,16 @@ function resizeYesButton() {
 
 function generateMessage(noCount) {
   const messages = [
-    "Không Bao Giờ",
-    "Anh bicc lỗi rồi ạa",
-    "Mong bé tha lỗi choo anhh :((",
-    "Anhh saii rồi , anhh đáng trách ạ",
-    "Bé đừng giận anhh nữa nhoo",
-    "Anhhh iu bé nhắm nhunnn đóoooo",
+    "Không tha đâu",
+    "Em biết lỗi rồi mà 😭",
+    "Anh tha lỗi cho em đi ạ 🥺",
+    "Em sai rồi, em xin lỗi anh 😭",
+    "Anh đừng giận em nữa nha 🥹",
+    "Em xin lỗi anh nhiều lắm 😭",
   ];
 
   const messageIndex = Math.min(noCount, messages.length - 1);
+
   return messages[messageIndex];
 }
 
